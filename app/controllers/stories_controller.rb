@@ -1,4 +1,5 @@
 class StoriesController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
   before_action :set_story, only: [:show, :update, :destroy]
 
   # GET /stories
@@ -19,6 +20,7 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
     @story = Story.new(story_params)
+    @story.user_id = current_user.id
 
     if @story.save
       render json: @story, status: :created, location: @story
