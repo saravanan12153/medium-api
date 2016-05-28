@@ -16,6 +16,9 @@ gem 'devise_token_auth', '~> 0.1.37'
 gem 'devise', '3.5.6'
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
+# for authorization
+gem 'pundit', '~> 1.1'
+
 group :development do
   gem 'spring', '~> 1.7', '>= 1.7.1'
   gem 'pry-rails', '~> 0.3.4'

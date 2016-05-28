@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
   # PATCH/PUT /stories/1
   # PATCH/PUT /stories/1.json
   def update
-    @story = Story.find(params[:id])
+    authorize @story
 
     if @story.update(story_params)
       head :no_content
@@ -44,6 +44,7 @@ class StoriesController < ApplicationController
   # DELETE /stories/1
   # DELETE /stories/1.json
   def destroy
+    authorize @story
     @story.destroy
 
     head :no_content
