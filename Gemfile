@@ -11,6 +11,11 @@ gem 'jbuilder', '~> 2.4', '>= 2.4.1'
 # for Request cross-origin checking
 gem 'rack-cors', '~> 0.4.0', :require => 'rack/cors'
 
+# for user authentications
+gem 'devise_token_auth', '~> 0.1.37'
+gem 'devise', '3.5.6'
+gem 'omniauth', '~> 1.3', '>= 1.3.1'
+
 group :development do
   gem 'spring', '~> 1.7', '>= 1.7.1'
   gem 'pry-rails', '~> 0.3.4'
