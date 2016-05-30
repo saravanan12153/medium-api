@@ -6,7 +6,8 @@ class ApplicationController < ActionController::API
   private
 
   def user_not_authorized
-    flash[:alert] = "You are not authorized to perform this action."
-    redirect_to(request.referrer || root_path)
+    # flash[:alert] = "You are not authorized to perform this action."
+    #redirect_to(request.referrer || stories_path)
+    render nothing: true, status: :unauthorized
   end
 end

@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :stories, dependent: :destroy
+  has_many :responses, dependent: :destroy
 
 end
