@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     resources :stories, except: [:new, :edit] do
       resources :responses, except: [:new, :edit]
     end
+
+    resources :profiles, only: [:show, :update]
   end
 end

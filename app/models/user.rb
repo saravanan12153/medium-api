@@ -10,5 +10,14 @@ class User < ActiveRecord::Base
 
   has_many :stories, dependent: :destroy
   has_many :responses, dependent: :destroy
+  has_one :profile, dependent: :destroy
+
+  after_create :create_profile
+
+  private
+
+  def create_profile
+    Profile.create!(user_id: self.id)
+  end
 
 end
