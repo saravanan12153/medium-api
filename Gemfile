@@ -19,6 +19,9 @@ gem 'omniauth', '~> 1.3', '>= 1.3.1'
 # for authorization
 gem 'pundit', '~> 1.1'
 
+# for follow, mentions etc
+gem 'socialization', '~> 1.2'
+
 group :development do
   gem 'spring', '~> 1.7', '>= 1.7.1'
   gem 'pry-rails', '~> 0.3.4'

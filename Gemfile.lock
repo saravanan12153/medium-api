@@ -126,6 +126,8 @@ GEM
     responders (2.1.2)
       railties (>= 4.2.0, < 5.1)
     slop (3.6.0)
+    socialization (1.2.0)
+      activerecord
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -156,7 +158,11 @@ DEPENDENCIES
   rack-cors (~> 0.4.0)
   rails (= 4.2.6)
   rails-api (~> 0.4.0)
+  socialization (~> 1.2)
   spring (~> 1.7, >= 1.7.1)
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.12.5
